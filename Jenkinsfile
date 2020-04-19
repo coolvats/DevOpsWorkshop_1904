@@ -1,5 +1,8 @@
 node{
-
+    environment {
+    registry = "coolvats/deployapp_web"
+    registryCredential = 'Awaravats29@'
+    }
     stage('SCM Checkout')
     {
         git 'https://github.com/coolvats/DevOpsWorkshop_1904.git'
