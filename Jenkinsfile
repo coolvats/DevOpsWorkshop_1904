@@ -2,7 +2,7 @@ node{
 
     stage('SCM Checkout')
     {
-        git 'https://github.com/iamdevopstrainer/onlineshop.git'
+        git 'https://github.com/coolvats/DevOpsWorkshop_1904.git'
     }
     
     stage('Run Docker Compose File')
@@ -14,7 +14,7 @@ node{
     
     stage('Push Docker Image to HUB')
     {
-        sh 'docker push coolvats29/deployapp_web'
+        sh 'docker push coolvats/deployapp_web'
     }
     
 }
