@@ -7,14 +7,14 @@ node{
     
     stage('Run Docker Compose File')
     {
-        sh 'docker-compose build'
-        sh 'docker-compose down'
-        sh 'docker-compose up -d'
+        sh '/usr/local/bin/docker-compose --versiondocker-compose build'
+        sh '/usr/local/bin/docker-compose --versiondocker-compose down'
+        sh '/usr/local/bin/docker-compose --versiondocker-compose up -d'
     }
     
     stage('Push Docker Image to HUB')
     {
-        sh 'sudo docker push iamdevopstrainer/deployapp_web'
+        sh 'docker push coolvats29/deployapp_web'
     }
     
 }
